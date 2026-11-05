@@ -1,16 +1,15 @@
-# Neniの歌單｜GitHub Pages 完整版 v4
+# Neniの歌單 - GitHub Pages 版 (修正版 v2)
 
-## 檔案
-- `index.html`：歌單首頁
-- `style.css`：網站樣式與桌機／手機背景設定
-- `script.js`：Google Sheets 資料讀取、搜尋、分類、隨機抽歌與複製功能
-- `copyright.html`：完整著作權聲明與使用條款
-- `assets/`：雛菊圖示、桌機與手機背景
+這一版**以原 NIAN 網站備份的 style(4).css 與 index(6).html 為基礎**，保留版面尺寸：主容器 1180px、卡片最小寬度 230px、卡片高度/間距與桌機手機響應式比例。僅替換主題色、圖片、名稱和 Google 試算表。
 
-## 著作權頁
-已補回完整章節：使用限制、允許範圍、第三方內容說明、侵權處理，並保留 `© 2026 LionLionTomato. All Rights Reserved.`。
+## 背景
+使用之前提供的「霧藍水面上的雛菊漣漪.png」作品；手機版保留完整直幅，桌機版是同作品以模糊延展兩側構成的橫幅，不是新畫的替代背景。
 
-## 部署
-將本資料夾內所有檔案（不是外層資料夾本身）上傳至 GitHub Repository 根目錄，再於 Settings → Pages 選擇 `main` 分支與 `/(root)`。
+## 資料
+指定試算表 `18BWphlrXzA3VC765bpRVuwsu62Spnuk4Pp4j5DXrsUg`，預設 gid=0。如資料在不同分頁，請在 script.js 更改 `SHEET_GID`。試算表須設為可供網站存取。每次更新帶隨機參數且不保存舊歌單。若讀取失敗會清空並顯示錯誤。
 
-歌曲資料來源為指定 Google 試算表；讀取失敗時不會顯示舊歌單。
+## GitHub Pages
+解壓縮後將此資料夾**內部檔案**放在 Repository 根目錄，進入 Settings → Pages → Deploy from a branch → main / (root) → Save。請記得刪除舊版已不存在的背景檔案，以免混淆。
+
+## 注意
+原參考網站未能透過本環境直接連線抓取即時版本；版面是依保留在使用者檔案庫的 NIAN 原始 CSS 與 HTML 精確還原，並非即時截圖逐像素驗證。

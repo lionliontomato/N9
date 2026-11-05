@@ -11,7 +11,7 @@ const SHEET_ID = '18BWphlrXzA3VC765bpRVuwsu62Spnuk4Pp4j5DXrsUg';
 const SHEET_GID = '0';
 const RECHECK_MS = 30_000;
 const SHEET_TIMEOUT_MS = 15_000;
-const DAISY_ICON_URL = './assets/daisy-icon.svg?v=20261105-neni-v3';
+const DAISY_ICON_URL = './assets/daisy-icon.svg?v=20261105-neni-v6';
 const palette = [
   ['#6f8795','#edf3f5'],['#7f9aaa','#eef5f4'],['#8da0b6','#f0f3f8'],
   ['#78918b','#eef4f1'],['#a18f99','#f6f1f4'],['#9b947e','#f5f2ea'],
