@@ -13,7 +13,7 @@ body{
   margin:0;min-height:100vh;color:var(--ink);
   font-family:'Zen Maru Gothic','Noto Serif TC',system-ui,sans-serif;
   overflow-x:hidden;background-color:#bfd5d5;
-  background-image:linear-gradient(rgba(245,251,250,.06),rgba(233,244,242,.16)),url('./assets/neni-background-desktop.jpg?v=20261105-neni-v8');
+  background-image:linear-gradient(rgba(245,251,250,.06),rgba(233,244,242,.16)),url('./assets/neni-background-desktop.jpg?v=20261105-neni-v3');
   background-size:cover;background-position:center top;background-repeat:no-repeat;background-attachment:fixed;
 }
 .float-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
@@ -146,7 +146,7 @@ body{
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 @media(max-width:768px){
   body{
-    background-image:linear-gradient(rgba(245,251,250,.07),rgba(234,244,242,.18)),url('./assets/neni-background-mobile.jpg?v=20261105-neni-v8');
+    background-image:linear-gradient(rgba(245,251,250,.07),rgba(234,244,242,.18)),url('./assets/neni-background-mobile.jpg?v=20261105-neni-v3');
     background-size:cover;background-position:center top;background-attachment:scroll;background-repeat:no-repeat;
   }
   .float{font-size:clamp(16px,5vw,26px);opacity:.20}
@@ -165,7 +165,7 @@ body{
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 
 /* Neni-specific colors only; preserve reference layout measurements. */
-body{background-color:#91b4b7;background-image:linear-gradient(rgba(241,249,247,.08),rgba(239,248,246,.14)),url('./assets/neni-background-desktop.jpg?v=20261105-neni-v8')}
+body{background-color:#91b4b7;background-image:linear-gradient(rgba(241,249,247,.08),rgba(239,248,246,.14)),url('./assets/neni-background-desktop.jpg?v=20261105-neni-v3')}
 .hero{background:linear-gradient(135deg,rgba(249,253,250,.66),rgba(219,237,231,.52))}
 .card{background:linear-gradient(145deg,rgba(255,255,255,.58),rgba(228,242,236,.42))}
 .decor-fish{background:rgba(228,244,238,.36);border-color:rgba(204,225,217,.52);opacity:.93}
@@ -173,4 +173,4 @@ body{background-color:#91b4b7;background-image:linear-gradient(rgba(241,249,247,
 .legal-wrap{position:relative;z-index:1;max-width:840px;margin:55px auto;padding:0 20px}
 .legal-card{padding:34px;border-radius:28px;background:rgba(250,254,251,.88);box-shadow:var(--shadow);line-height:1.9}
 .legal-card h1,.legal-card h2{color:#375c61}.legal-card a{color:#375c61}
-@media(max-width:768px){body{background-image:linear-gradient(rgba(239,249,245,.05),rgba(243,249,247,.16)),url('./assets/neni-background-mobile.jpg?v=20261105-neni-v8');background-size:cover;background-position:center top;background-repeat:no-repeat;background-attachment:scroll}}
+@media(max-width:768px){body{background-image:linear-gradient(rgba(239,249,245,.05),rgba(243,249,247,.16)),url('./assets/neni-background-mobile.jpg?v=20261105-neni-v3');background-size:cover;background-position:center top;background-repeat:no-repeat;background-attachment:scroll}}
