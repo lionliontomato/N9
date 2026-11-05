@@ -51,7 +51,7 @@ function parseTags(value) {
 
 function settingsFromRows(rows) {
   const settings = {};
-  const allowed = ['網站標題','網站主標題','網站小標題','抽歌視窗標題','關閉按鈕文字'];
+  const allowed = ['網站標題','網站主標題','主標題','網站小標題','抽歌視窗標題','關閉按鈕文字'];
   for (const row of rows) {
     // 新試算表的設定欄為 H / I；也相容原站的其他欄位放置方式。
     for (let i = 0; i < Math.max(9, row && row.c ? row.c.length : 0) - 1; i++) {
@@ -61,16 +61,17 @@ function settingsFromRows(rows) {
       for (const k of allowed) {
         if (normalizedKey.includes(k) && next) settings[k] = next;
       }
-      const matched = originalKey.match(/^(網站標題|網站小標題|抽歌視窗標題|關閉按鈕文字)\s*[：:]\s*(.+)$/);
+      const matched = originalKey.match(/^(網站標題|網站主標題|主標題|網站小標題|抽歌視窗標題|關閉按鈕文字)\s*[：:]\s*(.+)$/);
       if (matched && clean(matched[2])) settings[matched[1]] = clean(matched[2]);
     }
   }
-  // 主標題與小標題都由試算表 H 欄設定名稱、I 欄設定值控制。
-  // 同時相容「網站標題」及「網站主標題」兩種命名。
-  const siteTitle = settings['網站標題'] || settings['網站主標題'] || 'Neniの歌單';
+  // 主標題及小標題皆由 Google 試算表 H 欄設定名稱、I 欄設定值控制。
+  // 相容「網站標題」、「網站主標題」及「主標題」三種設定名稱。
+  const configuredTitle =
+    settings['網站標題'] || settings['網站主標題'] || settings['主標題'] || '';
 
   return {
-    title: siteTitle,
+    title: configuredTitle || 'Neniの歌單',
     subtitle: settings['網站小標題'] || '每一首歌，都是剛剛好的心情。',
     modalTitle: settings['抽歌視窗標題'] || '🌼 Neni 推薦',
     closeText: settings['關閉按鈕文字'] || '就這個了!'
@@ -78,7 +79,7 @@ function settingsFromRows(rows) {
 }
 
 function applySettings(settings) {
-  // 主標題、小標題與瀏覽器分頁標題同步採用試算表設定。
+  // 網頁主標題、小標題及瀏覽器分頁標題同步套用試算表設定。
   el('siteTitle').textContent = settings.title;
   el('siteSubtitle').textContent = settings.subtitle;
   el('modalTitle').textContent = settings.modalTitle;

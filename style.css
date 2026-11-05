@@ -174,15 +174,3 @@ body{background-color:#91b4b7;background-image:linear-gradient(rgba(241,249,247,
 .legal-card{padding:34px;border-radius:28px;background:rgba(250,254,251,.88);box-shadow:var(--shadow);line-height:1.9}
 .legal-card h1,.legal-card h2{color:#375c61}.legal-card a{color:#375c61}
 @media(max-width:768px){body{background-image:linear-gradient(rgba(239,249,245,.05),rgba(243,249,247,.16)),url('./assets/neni-background-mobile.jpg?v=20261105-neni-v3');background-size:cover;background-position:center top;background-repeat:no-repeat;background-attachment:scroll}}
-
-
-/* Opacity harmonization update: keep top panel and song cards visually consistent. */
-.hero{background:linear-gradient(135deg,rgba(249,253,250,.60),rgba(223,238,233,.48))!important;border:1px solid rgba(255,255,255,.68)!important;-webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important;box-shadow:0 18px 45px rgba(36,68,75,.13)!important}
-.card{background:linear-gradient(145deg,rgba(249,253,250,.60),rgba(223,238,233,.48))!important;border:1px solid rgba(255,255,255,.68)!important;-webkit-backdrop-filter:blur(12px)!important;backdrop-filter:blur(12px)!important;box-shadow:0 15px 28px rgba(44,73,79,.10)!important}
-.empty{background:linear-gradient(145deg,rgba(249,253,250,.60),rgba(223,238,233,.48))!important;border:1px solid rgba(255,255,255,.68)!important;color:#66858a!important}
-
-
-/* Stronger consistent panel style: clearer, more solid, less frosted. */
-.hero{background:linear-gradient(135deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 16px 34px rgba(36,68,75,.12)!important}
-.card{background:linear-gradient(145deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 14px 24px rgba(44,73,79,.10)!important}
-.empty{background:linear-gradient(145deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;color:#5f7980!important;box-shadow:0 14px 24px rgba(44,73,79,.08)!important}
