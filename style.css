@@ -186,23 +186,3 @@ body{background-color:#91b4b7;background-image:linear-gradient(rgba(241,249,247,
 .hero{background:linear-gradient(135deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 16px 34px rgba(36,68,75,.12)!important}
 .card{background:linear-gradient(145deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 14px 24px rgba(44,73,79,.10)!important}
 .empty{background:linear-gradient(145deg,rgba(248,252,250,.82),rgba(236,244,241,.78))!important;border:1px solid rgba(255,255,255,.88)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;color:#5f7980!important;box-shadow:0 14px 24px rgba(44,73,79,.08)!important}
-
-
-/* Final panel consistency: clear, even fill across upper and lower sections. */
-.hero,
-.card,
-.empty {
-  background: rgba(241, 248, 245, 0.90) !important;
-  border: 1px solid rgba(255, 255, 255, 0.92) !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
-.hero {
-  box-shadow: 0 16px 34px rgba(36, 68, 75, 0.12) !important;
-}
-.card {
-  box-shadow: 0 14px 24px rgba(44, 73, 79, 0.10) !important;
-}
-.empty {
-  box-shadow: 0 14px 24px rgba(44, 73, 79, 0.08) !important;
-}

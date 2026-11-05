@@ -51,7 +51,7 @@ function parseTags(value) {
 
 function settingsFromRows(rows) {
   const settings = {};
-  const allowed = ['網站標題','網站小標題','抽歌視窗標題','關閉按鈕文字'];
+  const allowed = ['網站標題','網站主標題','網站小標題','抽歌視窗標題','關閉按鈕文字'];
   for (const row of rows) {
     // 新試算表的設定欄為 H / I；也相容原站的其他欄位放置方式。
     for (let i = 0; i < Math.max(9, row && row.c ? row.c.length : 0) - 1; i++) {
@@ -65,21 +65,25 @@ function settingsFromRows(rows) {
       if (matched && clean(matched[2])) settings[matched[1]] = clean(matched[2]);
     }
   }
+  // 主標題與小標題都由試算表 H 欄設定名稱、I 欄設定值控制。
+  // 同時相容「網站標題」及「網站主標題」兩種命名。
+  const siteTitle = settings['網站標題'] || settings['網站主標題'] || 'Neniの歌單';
+
   return {
-    title: 'Neniの歌單',
+    title: siteTitle,
     subtitle: settings['網站小標題'] || '每一首歌，都是剛剛好的心情。',
-    modalTitle: '🌼 Neni 推薦',
+    modalTitle: settings['抽歌視窗標題'] || '🌼 Neni 推薦',
     closeText: settings['關閉按鈕文字'] || '就這個了!'
   };
 }
 
 function applySettings(settings) {
-  // 站名固定為 Neni，避免舊試算表設定誤覆蓋品牌名稱。
-  el('siteTitle').textContent = 'Neniの歌單';
+  // 主標題、小標題與瀏覽器分頁標題同步採用試算表設定。
+  el('siteTitle').textContent = settings.title;
   el('siteSubtitle').textContent = settings.subtitle;
   el('modalTitle').textContent = settings.modalTitle;
   el('closeModal').textContent = settings.closeText;
-  document.title = 'Neniの歌單';
+  document.title = settings.title;
   document.body.classList.remove('settings-pending');
 }
 
